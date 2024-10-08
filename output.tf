@@ -19,3 +19,15 @@ value = data.aws_vpc.default
     value = data.aws_vpc.vpc_info
    
  }
+ output "pub_subnet_ids" {
+    value = aws_subnet.public.id
+   
+ }
+ output "private_subnet_ids" {
+    value = aws_subnet.private.id
+   
+ }
+ output "db_subnet_ids" {
+    value = aws_subnet.db.id
+   
+ }
