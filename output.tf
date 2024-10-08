@@ -20,14 +20,18 @@ value = data.aws_vpc.default
    
  }
  output "pub_subnet_ids" {
-    value = aws_subnet.public.id
+    value = aws_subnet.public[*].id
    
  }
  output "private_subnet_ids" {
-    value = aws_subnet.private.id
+    value = aws_subnet.private[*].id
    
  }
  output "db_subnet_ids" {
-    value = aws_subnet.db.id
+    value = aws_subnet.db[*].id
+   
+ }
+ output "db_group_subnet_ids" {
+    value = aws_db_subnet_group.db_group.id
    
  }

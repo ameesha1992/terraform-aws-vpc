@@ -66,7 +66,7 @@ var.vpc_tags,
 
 
 
-resource "aws_db_subnet_group" "default" {
+resource "aws_db_subnet_group" "db_group" {
   name =local.resource_name
   subnet_ids =aws_subnet.db[*].id 
   
